@@ -1,6 +1,6 @@
 {
     "name": "rondarby/laracomm",
-    "version": "0.0.2",
+    "version": "dev-master",
     "source": {
         "url": "https://github.com/RonDarby/laracomm",
         "type": "git",
@@ -45,7 +45,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "0.0.3"
         }
     }
 }
