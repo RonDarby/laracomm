@@ -4,12 +4,13 @@
     "source": {
         "url": "https://github.com/RonDarby/laracomm",
         "type": "git",
-        "reference": "/"
+        "reference": "master"
     },
     "description": "Ecommerce Package for Laravel",
     "keywords": [
         "ecommerce",
-        "laracomm"
+        "laracomm",
+        "laravel"
     ],
     "homepage": "https://github.com/RonDarby/laracomm",
     "license": "LGPL-3",
