@@ -1,11 +1,16 @@
 {
     "name": "rondarby/laracomm",
+    "version": "master",
+    "source": {
+        "url": "https://bitbucket.org/rondarby/laracomm-package.git",
+        "type": "git"
+    },
     "description": "Ecommerce Package for Laravel",
     "keywords": [
         "ecommerce",
         "laracomm"
     ],
-    "homepage": "https://github.com/thephprondarby/laracomm",
+    "homepage": "https://bitbucket.org/rondarby/laracomm-package",
     "license": "MIT",
     "authors": [
         {
