@@ -1,9 +1,9 @@
 {
     "name": "rondarby/laracomm",
-    "description": ":package_description",
+    "description": "Ecommerce Package for Laravel",
     "keywords": [
-        "league",
-        ":package_name"
+        "ecommerce",
+        "laracomm"
     ],
     "homepage": "https://github.com/thephprondarby/laracomm",
     "license": "MIT",
