@@ -3,7 +3,8 @@
     "version": "dev-master",
     "source": {
         "url": "https://github.com/RonDarby/laracomm",
-        "type": "git"
+        "type": "git",
+        "reference": "/"
     },
     "description": "Ecommerce Package for Laravel",
     "keywords": [
