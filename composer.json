@@ -12,7 +12,7 @@
         "laracomm"
     ],
     "homepage": "https://bitbucket.org/rondarby/laracomm-package",
-    "license": "MIT",
+    "license": "LGPL-3",
     "authors": [
         {
             "name": "Ron Darby",
@@ -23,8 +23,7 @@
     ],
     "require": {
         "illuminate/support": "~5.1",
-        "php" : ">=5.5.9",
-        "cartalyst/themes": "3.0.*"
+        "php" : ">=5.5.9"
     },
     "repositories": [
         {
@@ -53,13 +52,5 @@
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
-    },
-    "config": {
-        "preferred-install": "dist",
-      "github-oauth": {
-        "github.com": "0c4140926f98b9c640ed882b15d372b1719becc3"
-      }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
