@@ -3,7 +3,8 @@
     "version": "master",
     "source": {
         "url": "https://bitbucket.org/rondarby/laracomm-package.git",
-        "type": "git"
+        "type": "git",
+        "reference": "support"
     },
     "description": "Ecommerce Package for Laravel",
     "keywords": [
