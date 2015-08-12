@@ -1,6 +1,6 @@
 {
     "name": "rondarby/laracomm",
-    "version": "master",
+    "version": "dev-master",
     "source": {
         "url": "https://bitbucket.org/rondarby/laracomm-package.git",
         "type": "git",
