@@ -1,5 +1,7 @@
 # laracomm
 
+# This package is under development and is not ready for use!!!!!!!!!!!
+
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
@@ -11,7 +13,7 @@ This is where your description should go. Try and limit it to a paragraph or two
 PSRs you support to avoid any confusion with users and contributors.
 
 ## Install
-
+# Do not install!!!!!
 Via Composer
 
 ``` bash
