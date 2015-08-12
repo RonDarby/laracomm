@@ -4,7 +4,7 @@
     "source": {
         "url": "https://bitbucket.org/rondarby/laracomm-package",
         "type": "git",
-        "reference": "src"
+        "reference": ""
     },
     "description": "Ecommerce Package for Laravel",
     "keywords": [
@@ -21,9 +21,45 @@
             "role": "Developer"
         }
     ],
+    "require": {
+        "illuminate/support": "~5.1",
+        "php" : ">=5.5.9",
+        "cartalyst/themes": "3.0.*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.cartalyst.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "~1.1"
+    },
     "autoload": {
         "psr-4": {
             "Rondarby\\Laracomm\\": "src"
         }
-    }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rondarby\\Laracomm\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+      "github-oauth": {
+        "github.com": "0c4140926f98b9c640ed882b15d372b1719becc3"
+      }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
