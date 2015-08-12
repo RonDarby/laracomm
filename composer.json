@@ -2,7 +2,7 @@
     "name": "rondarby/laracomm",
     "version": "dev-master",
     "source": {
-        "url": "https://rondarby:Droopy(*&@bitbucket.org/rondarby/laracomm-package",
+        "url": "https://bitbucket.org/rondarby/laracomm-package",
         "type": "git",
         "reference": ""
     },
@@ -19,21 +19,6 @@
             "email": "ron@cozareg.co.za",
             "homepage": "http://cozareg.co.za",
             "role": "Developer"
-        }
-    ],
-    "require": {
-        "illuminate/support": "~5.1",
-        "php" : ">=5.5.9",
-        "cartalyst/themes": "3.0.*"
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.cartalyst.com"
-        },
-        {
-            "url": "https://rondarby:Droopy(*&@bitbucket.org/rondarby/laracomm-package",
-            "type": "git"
         }
     ],
     "require-dev": {
