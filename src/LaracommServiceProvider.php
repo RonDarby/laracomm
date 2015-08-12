@@ -23,24 +23,39 @@ class LaracommServiceProvider extends ServiceProvider
         public function boot()
         {
 
-            // use this if your package has views
-            $this->loadViewsFrom(realpath(__DIR__.'/resources/views'), 'laracomm');
+            $path = realpath(__DIR__.'/resources/views/');
+
+            $this->loadViewsFrom( $path, 'laracomm');
 
             // use this if your package has routes
             $this->setupRoutes($this->app->router);
 
-            view()->share( 'frontTheme', Config::get( 'laracomm.theme.front', 'default' ) . '.' );
-            view()->share( 'adminThem',  Config::get( 'laracomm.theme.admin', 'default' ) . '.' );
+            $config = $this->app['config']->get('laracomm');
 
-            // use this if your package needs a config file
-            // $this->publishes([
-            //         __DIR__.'/config/config.php' => config_path('laracomm.php'),
-            // ]);
+
+            view()->share( 'frontTheme', 'laracomm::front.' . $config['theme']['front'] . '.' );
+            view()->share( 'adminThem',  'laracomm::admin.' . $config['theme']['admin'] . '.' );
+
+            $migrations = realpath(__DIR__.'/database/migrations');
+
+            $this->publishes([
+               $migrations => $this->app->databasePath().'/migrations',
+            ], 'migrations');
+
+             $this->publishes([
+                     __DIR__.'/config/config.php' => config_path('laracomm.php')
+             ]);
+
+            $this->publishes( [
+                __DIR__.'/resources/views' => base_path('resources/views/vendor/laracomm' )
+            ]);
+
+
 
             // use the vendor configuration file as fallback
-            // $this->mergeConfigFrom(
-            //     __DIR__.'/config/config.php', 'laracomm'
-            // );
+             $this->mergeConfigFrom(
+                 __DIR__.'/config/config.php', 'laracomm'
+             );
         }
 
         /**
@@ -65,10 +80,11 @@ class LaracommServiceProvider extends ServiceProvider
         public function register()
         {
             $this->registerLaracomm();
+            $this->registerBindings();
 
             // use this if your package has a config file
              config([
-                     'config/laracomm.php',
+                     'config/config.php',
              ]);
         }
 
@@ -77,5 +93,10 @@ class LaracommServiceProvider extends ServiceProvider
             $this->app->bind('laracomm',function($app){
                 return new Laracomm($app);
             });
+        }
+
+        private function registerBindings()
+        {
+            // $this->app->bind( );
         }
 }
