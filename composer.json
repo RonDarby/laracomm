@@ -24,7 +24,8 @@
     ],
     "require": {
         "illuminate/support": "~5.1",
-        "php" : ">=5.5.9"
+        "php" : ">=5.5.9",
+        "cartalyst/support": "1.0.*"
     },
     "require-dev": {
         "phpunit/phpunit" : "4.*",
@@ -45,7 +46,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.0.4-dev"
+            "dev-master": "0.0.5-dev"
         }
     }
 }

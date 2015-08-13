@@ -25,7 +25,7 @@ class Products extends Model
 
 	public function categories()
 	{
-		return $this->belongsToMany( 'Rondarby\Laracomm\Models\Categories' )->withPivot('Rondarby\Laracomm\Models\ProductCategories');
+		return $this->belongsToMany( 'Rondarby\Laracomm\Models\Categories' );
 	}
 
 }

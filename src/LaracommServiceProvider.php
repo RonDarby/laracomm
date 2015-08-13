@@ -2,9 +2,7 @@
 
 namespace Rondarby\Laracomm;
 
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Routing\Router;
 
 class LaracommServiceProvider extends ServiceProvider
 {
@@ -23,18 +21,7 @@ class LaracommServiceProvider extends ServiceProvider
         public function boot()
         {
 
-            $path = realpath(__DIR__.'/resources/views/');
 
-            $this->loadViewsFrom( $path, 'laracomm');
-
-            // use this if your package has routes
-            $this->setupRoutes($this->app->router);
-
-            $config = $this->app['config']->get('laracomm');
-
-
-            view()->share( 'frontTheme', 'laracomm::front.' . $config['theme']['front'] . '.' );
-            view()->share( 'adminThem',  'laracomm::admin.' . $config['theme']['admin'] . '.' );
 
             $migrations = realpath(__DIR__.'/database/migrations');
 
@@ -42,35 +29,17 @@ class LaracommServiceProvider extends ServiceProvider
                $migrations => $this->app->databasePath().'/migrations',
             ], 'migrations');
 
-             $this->publishes([
-                     __DIR__.'/config/config.php' => config_path('laracomm.php')
-             ]);
-
-            $this->publishes( [
-                __DIR__.'/resources/views' => base_path('resources/views/vendor/laracomm' )
-            ]);
+            /* $this->publishes([
+                                  __DIR__.'/config/config.php' => config_path('laracomm.php')
+                          ]);
 
 
-
-            // use the vendor configuration file as fallback
-             $this->mergeConfigFrom(
-                 __DIR__.'/config/config.php', 'laracomm'
-             );
+                         // use the vendor configuration file as fallback
+                          $this->mergeConfigFrom(
+                              __DIR__.'/config/config.php', 'laracomm'
+                          );*/
         }
 
-        /**
-         * Define the routes for the application.
-         *
-         * @param  \Illuminate\Routing\Router  $router
-         * @return void
-         */
-        public function setupRoutes(Router $router)
-        {
-            $router->group(['namespace' => 'Rondarby\Laracomm\Http\Controllers'], function($router)
-            {
-                require __DIR__.'/Http/routes.php';
-            });
-        }
 
         /**
          * Register any package services.
@@ -84,9 +53,9 @@ class LaracommServiceProvider extends ServiceProvider
             $this->registerCommands();
 
             // use this if your package has a config file
-             config([
+            /* config([
                      'config/config.php',
-             ]);
+             ]);*/
         }
 
         private function registerLaracomm()
