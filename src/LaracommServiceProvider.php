@@ -20,9 +20,6 @@ class LaracommServiceProvider extends ServiceProvider
          */
         public function boot()
         {
-
-
-
             $migrations = realpath(__DIR__.'/database/migrations');
 
             $this->publishes([
@@ -38,6 +35,7 @@ class LaracommServiceProvider extends ServiceProvider
                           $this->mergeConfigFrom(
                               __DIR__.'/config/config.php', 'laracomm'
                           );*/
+            $this-> bootFacades();
         }
 
 
@@ -52,10 +50,17 @@ class LaracommServiceProvider extends ServiceProvider
             $this->registerBindings();
             $this->registerCommands();
 
+
             // use this if your package has a config file
             /* config([
                      'config/config.php',
              ]);*/
+        }
+
+        private function bootFacades()
+        {
+            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+            $loader->alias('Products', 'Rondarby\Laracomm\Facades\Products');
         }
 
         private function registerLaracomm()
@@ -67,7 +72,9 @@ class LaracommServiceProvider extends ServiceProvider
 
         private function registerBindings()
         {
-            // $this->app->bind( );
+            $this->app->bind(
+                'Rondarby\Laracomm\Models\Repository\ProductsRepositoryInterface','Rondarby\Laracomm\Models\Repository\Eloquent\ProductsRepository'
+             );
         }
 
         private function registerCommands()
