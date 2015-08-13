@@ -1,5 +1,7 @@
 # laracomm
 
+[![Join the chat at https://gitter.im/RonDarby/laracomm](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/RonDarby/laracomm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 # This package is under development and is not ready for use!!!!!!!!!!!
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
