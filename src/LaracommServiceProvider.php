@@ -81,6 +81,7 @@ class LaracommServiceProvider extends ServiceProvider
         {
             $this->registerLaracomm();
             $this->registerBindings();
+            $this->registerCommands();
 
             // use this if your package has a config file
              config([
@@ -98,5 +99,13 @@ class LaracommServiceProvider extends ServiceProvider
         private function registerBindings()
         {
             // $this->app->bind( );
+        }
+
+        private function registerCommands()
+        {
+            $this->app->singleton('laracomm.install', function ($app) {
+                return $app['Rondarby\Laracomm\Console\Commands\InstallCommand'];
+            });
+            $this->commands('laracomm.install');
         }
 }

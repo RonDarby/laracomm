@@ -18,7 +18,7 @@ Via Composer
 
 ``` bash
 $ composer require rondarby/laracomm
-$ php artisan vendor:publish
+$ php artisan laracomm:install (currently type anything in the code)
 ```
 
 ## Usage

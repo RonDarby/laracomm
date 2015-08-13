@@ -25,8 +25,7 @@ class Products extends Model
 
 	public function categories()
 	{
-		return $this->hasManyThrough( 'Rondarby\Laracomm\Models\Categories', 'Rondarby\Laracomm\Models\ProductCategories','category_id',
-					'product_id' , 'category_id' );
+		return $this->belongsToMany( 'Rondarby\Laracomm\Models\Categories' )->withPivot('Rondarby\Laracomm\Models\ProductCategories');
 	}
 
 }
