@@ -1,8 +1,7 @@
 # laracomm
 
 [![Join the chat at https://gitter.im/RonDarby/laracomm](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/RonDarby/laracomm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![More by Ron Darby at http://laravel.co.za](https://img.shields.io/badge/Laravel-5-brightgreen.svg?style=flat-square)](http://laravel.co.za)
-[![Packagist](https://img.shields.io/packagist/dt/doctrine/orm.svg?style=plastic)](https://packagist.org/packages/rondarby/laracomm)
+[![More by Ron Darby at http://laravel.co.za](https://img.shields.io/badge/Laravel-5-brightgreen.svg?style=plastic)](http://laravel.co.za)
 [![Packagist Pre Release](https://img.shields.io/packagist/vpre/symfony/symfony.svg?style=plastic)](https://packagist.org/packages/rondarby/laracomm)
 
 
