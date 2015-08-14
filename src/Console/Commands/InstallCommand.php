@@ -17,52 +17,14 @@ class InstallCommand extends Command
 
     public function handle()
     {
-        $this->helloMessage();
-        $valid = $this->checkPurchaseCode();
-        if( $valid )
-        {
-            Artisan::call('vendor:publish');
-            // Run the migrations
-            Artisan::call('migrate', [ '--force' => true ]);
-            $this->output->writeln(<<<SUCEESS
-<fg=green>
-Success, Thanks for purchasing!!!!
-</fg=green>
-SUCEESS
-);
-        }
-        else
-        {
-            $this->output->writeln(<<<INVALID
-<fg=red>
-Your Purchase Code is incorrect!!!
-</fg=red>
-INVALID
-);
-        }
+        Artisan::call('vendor:publish');
+
+        \Event::fire('laracomm.published');
+        // Run the migrations
+        Artisan::call('migrate', [ '--force' => true ]);
+
+        \Event::fire('laracomm.migrated');
     }
 
-    private function checkPurchaseCode()
-    {
-        $code = $this->ask('Please insert the purchase code.');
 
-        // ToDo:: Write the integration into either cozareg's license or envato's sales
-        return true;
-    }
-
-    private function helloMessage()
-    {
-        $this->output->writeln(<<<HELLO
-<fg=white>
-*-----------------------------------------------*
-|                                               |
-|       Thank-You for installing LaraComm       |
-|              Copyright (c) 2015               |
-|              Ron Darby LaraComm.              |
-|                                               |
-*-----------------------------------------------*
-</fg=white>
-HELLO
-        );
-    }
 }
