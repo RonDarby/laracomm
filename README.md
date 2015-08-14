@@ -1,15 +1,14 @@
 # laracomm
 
 [![Join the chat at https://gitter.im/RonDarby/laracomm](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/RonDarby/laracomm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![More by Ron Darby at http://laravel.co.za](https://img.shields.io/badge/Laravel-5-brightgreen.svg?style=flat-square)](http://laravel.co.za)
+[![Packagist](https://img.shields.io/packagist/dt/doctrine/orm.svg?style=plastic)](https://packagist.org/packages/rondarby/laracomm)
+[![Packagist Pre Release](https://img.shields.io/packagist/vpre/symfony/symfony.svg?style=plastic)](https://packagist.org/packages/rondarby/laracomm)
+
 
 # This package is under development and is not ready for use!!!!!!!!!!!
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
+
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
 PSRs you support to avoid any confusion with users and contributors.
