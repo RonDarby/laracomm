@@ -75,6 +75,10 @@ class LaracommServiceProvider extends ServiceProvider
             $this->app->bind(
                 'Rondarby\Laracomm\Models\Repository\ProductsRepositoryInterface','Rondarby\Laracomm\Models\Repository\Eloquent\ProductsRepository'
              );
+            $this->app->bind(
+                    'Rondarby\Laracomm\Models\Repository\CategoriesRepositoryInterface',
+                'Rondarby\Laracomm\Models\Repository\Eloquent\CategoriesRepository'
+                 );
         }
 
         private function registerCommands()
