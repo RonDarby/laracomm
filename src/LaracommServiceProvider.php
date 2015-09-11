@@ -61,6 +61,8 @@ class LaracommServiceProvider extends ServiceProvider
         {
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
             $loader->alias('Products', 'Rondarby\Laracomm\Facades\Products');
+            $loader->alias('Categories','Rondarby\Laracomm\Facades\Categories');
+
         }
 
         private function registerLaracomm()
